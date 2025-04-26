@@ -151,7 +151,6 @@
     .form-actions {
         flex-direction: column;
         gap: 10px;
-        margin-left: 50px;
         width: 100%;
     }
     

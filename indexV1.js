@@ -1,6 +1,7 @@
 // Simple mobile menu toggle
 document.querySelector('.mobile-menu-btn').addEventListener('click', function() {
     document.querySelector('nav').classList.toggle('active');
+    console.log("tes");
     this.classList.toggle('active');
 });
 
@@ -105,19 +106,19 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 
         // AUTO SLIDE TESTIMONI
-    // let autoSlideInterval = setInterval(() => {
-    //     const currentSlide = track.querySelector('.current-slide');
-    //     let nextSlide = currentSlide.nextElementSibling;
-    //     const currentDot = dotsNav.querySelector('.current-slide');
-    //     let nextDot = currentDot.nextElementSibling;
+    let autoSlideInterval = setInterval(() => {
+        const currentSlide = track.querySelector('.current-slide');
+        let nextSlide = currentSlide.nextElementSibling;
+        const currentDot = dotsNav.querySelector('.current-slide');
+        let nextDot = currentDot.nextElementSibling;
 
-    //     if (!nextSlide) {
-    //         nextSlide = slides[0];
-    //         nextDot = dots[0];
-    //     }
+        if (!nextSlide) {
+            nextSlide = slides[0];
+            nextDot = dots[0];
+        }
 
-    //     moveToSlide(track, currentSlide, nextSlide);
-    //     updateDots(currentDot, nextDot);
-    // }, 6000);
+        moveToSlide(track, currentSlide, nextSlide);
+        updateDots(currentDot, nextDot);
+    }, 6000);
     
 });

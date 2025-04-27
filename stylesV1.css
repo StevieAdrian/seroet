@@ -50,6 +50,13 @@ html {
     padding: 0 15px;
 }
 
+.container-description {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
 h1, h2, h3, h4, h5, h6 {
     margin-bottom: 1rem;
     line-height: 1.2;
@@ -426,7 +433,7 @@ nav ul li a:hover::after {
 .contact-info {
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: space-around;
 }
 
 .info-item {

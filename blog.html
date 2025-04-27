@@ -13,9 +13,9 @@
 <body>
     <header>
         <div class="container">
-            <div class="logo">
+            <a href="#top">
                 <img src="photo/logo_Seroet_cropped.png" alt="Seroet Logo" class="logo-image">
-            </div>
+            </a>
             <nav>
                 <ul>
                     <li><a href="indexV1.html">Home</a></li>
@@ -59,13 +59,83 @@
                     </div>
                 </div>
             </div>
+                
+            <section class="testimoni-section">
+                <h2 class="testimoni-title">Apa Kata Mereka?</h2>
+                
+                <div class="carousel">
+                    <div class="carousel-track-container">
+                        <ul class="carousel-track">
+                            <li class="carousel-slide current-slide">
+                                <div class="testimoni-item">
+                                    <img src="photo/testi_1.jpg" alt="Dita" class="testimoni-foto">
+                                    <p>"Es Seroet benar-benar segar dan unik! Rasa lokalnya terasa banget."</p>
+                                    <h4>- Dita, Jakarta</h4>
+                                </div>
+                            </li>
+                            <li class="carousel-slide">
+                                <div class="testimoni-item">
+                                    <img src="photo/testi_10.jpg" alt="Ibu Martono" class="testimoni-foto">
+                                    <p>"Konsep edukatifnya keren, anak saya jadi tahu tentang jajanan tradisional."</p>
+                                    <h4>- Ibu Wati, Surabaya</h4>
+                                </div>
+                            </li>
+                            <li class="carousel-slide">
+                                <div class="testimoni-item">
+                                    <video class="testimoni-video" autoplay loop muted>
+                                        <source src="videos/testi_1.mp4" type="video/mp4">
+                                        Your browser does not support the video tag.
+                                    </video>
+                                    <p>"Saya sudah coba semua varian Es Seroet dan semuanya enak!"</p>
+                                    <h4>- Rian, Bandung</h4>
+                                </div>
+                            </li>
+                            <li class="carousel-slide">
+                                <div class="testimoni-item">
+                                    <video class="testimoni-video" autoplay loop muted>
+                                        <source src="videos/testi_8.mp4" type="video/mp4">
+                                        Your browser does not support the video tag.
+                                    </video>
+                                    <p>"Saya sudah coba semua varian Es Seroet dan semuanya enak!"</p>
+                                    <h4>- Rian, Bandung</h4>
+                                </div>
+                            </li>
+                            <li class="carousel-slide">
+                                <div class="testimoni-item">
+                                    <img src="photo/testi_10.jpg" alt="Ibu Wati" class="testimoni-foto">
+                                    <p>"Konsep edukatifnya keren, anak saya jadi tahu tentang jajanan tradisional."</p>
+                                    <h4>- Ibu Wati, Surabaya</h4>
+                                </div>
+                            </li>
+                            <li class="carousel-slide">
+                                <div class="testimoni-item">
+                                    <img src="photo/testi_11.jpg" alt="Ibu blabla" class="testimoni-foto">
+                                    <p>"Konsep edukatifnya keren, anak saya jadi tahu tentang jajanan tradisional."</p>
+                                    <h4>- Ibu Wati, Surabaya</h4>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>           
+                    <button class="carousel-button left">&#10094;</button>
+                    <button class="carousel-button right">&#10095;</button>
+            
+                    <div class="carousel-nav">
+                        <button class="carousel-indicator current-slide"></button>
+                        <button class="carousel-indicator"></button>
+                        <button class="carousel-indicator"></button>
+                        <button class="carousel-indicator"></button>
+                        <button class="carousel-indicator"></button>
+                        <button class="carousel-indicator"></button>
+                    </div>
+                </div>
+            </section>
+
         </div>
     </main>
     
-    <!-- Popup for full article -->
     <div class="modal-overlay" id="articleModal">
         <div class="modal-container">
-            <div class="modal-close" id="closeArticleModal">×</div>
+            <div class="modal-close" id="closeArticleModal">x</div>
             
             <div class="modal-header">
                 <div class="modal-date">April 13, 2025</div>
@@ -126,7 +196,7 @@
                         <li><a href="indexV1.html#about">About</a></li>
                         <li><a href="indexV1.html#menu">Menu</a></li>
                         <li><a href="indexV1.html#events">Private Events</a></li>
-                        <li><a href="indexV1.html#contact">Contact</a></li>
+                        <li><a href="indexV1.html#contact">Contact Us</a></li>
                         <li><a href="blog.html">Blog</a></li>
                     </ul>
                 </div>
@@ -137,45 +207,7 @@
         </div>
     </footer>
 
-    <script>
-        // Simple mobile menu toggle
-        document.querySelector('.mobile-menu-btn').addEventListener('click', function() {
-            document.querySelector('nav').classList.toggle('active');
-            this.classList.toggle('active');
-        });
-        
-        // Modal functionality
-        const modal = document.getElementById('articleModal');
-        const openModalBtn = document.getElementById('openArticleModal');
-        const closeModalBtn = document.getElementById('closeArticleModal');
-        
-        // Open modal
-        openModalBtn.addEventListener('click', function() {
-            modal.classList.add('active');
-            document.body.style.overflow = 'hidden'; // Prevent scrolling when modal is open
-        });
-        
-        // Close modal
-        closeModalBtn.addEventListener('click', function() {
-            modal.classList.remove('active');
-            document.body.style.overflow = 'auto'; // Re-enable scrolling
-        });
-        
-        // Close modal when clicking outside
-        modal.addEventListener('click', function(e) {
-            if (e.target === modal) {
-                modal.classList.remove('active');
-                document.body.style.overflow = 'auto';
-            }
-        });
-        
-        // Close modal with Escape key
-        document.addEventListener('keydown', function(e) {
-            if (e.key === 'Escape' && modal.classList.contains('active')) {
-                modal.classList.remove('active');
-                document.body.style.overflow = 'auto';
-            }
-        });
-    </script>
+    <script src="blog.js"></script>
+
 </body>
 </html>

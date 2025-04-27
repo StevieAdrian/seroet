@@ -403,6 +403,10 @@ nav ul li a:hover::after {
     margin-bottom: 20px;
 }
 
+#message {
+    resize: none;
+}
+
 .form-group label {
     display: block;
     margin-bottom: 5px;

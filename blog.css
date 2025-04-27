@@ -1,4 +1,3 @@
-/* Blog specific styles */
 .blog-container {
     max-width: 1200px;
     margin: 0 auto;
@@ -214,6 +213,165 @@
 .modal-content strong {
     color: var(--secondary-color);
 }
+
+.testimoni-section {
+    background-color: var(--light-green);
+    padding: 50px 20px;
+    border-radius: var(--border-radius);
+    box-shadow: var(--box-shadow);
+    margin: 50px 0;
+    text-align: center;
+}
+
+.testimoni-title {
+    font-size: 2rem;
+    color: var(--secondary-color);
+    margin-bottom: 40px;
+    font-family: 'Pacifico', cursive;
+}
+
+.carousel {
+    position: relative;
+    overflow: visible; 
+    width: 100%;
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+.carousel-track-container {
+    position: relative;
+    height: 350px; 
+    overflow: hidden;
+}
+
+.carousel-track {
+    position: relative;
+    height: 100%;
+    transition: transform 0.5s ease;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.carousel-slide {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+.carousel-nav {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+}
+
+.carousel-nav button {
+    width: 16px;
+    height: 16px;
+    border-radius: 25px;
+    border: 2px solid black; 
+    cursor: pointer;
+    margin: 0;
+    padding: 0;
+}
+
+.carousel-nav button.current-slide {
+    background-color: black;
+}
+
+.testimoni-item {
+    background: white;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    height: 100%;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.testimoni-foto {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 20px;
+    border: 3px solid var(--primary-color);
+}
+
+.testimoni-video {
+    width: 100%;
+    max-width: 400px;
+    height: auto; 
+    max-height: 225px; 
+    border-radius: 10px;
+    margin-bottom: 20px;
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.2);
+    object-fit: cover;
+}
+
+.testimoni-item p {
+    font-style: italic;
+    margin-bottom: 15px;
+    line-height: 1.6;
+}
+
+.testimoni-item h4 {
+    color: var(--secondary-color);
+    margin: 0;
+}
+
+.carousel-slide .testimoni-item:has(video) {
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+.testimoni-video::-webkit-media-controls-play-button {
+    background-color: var(--primary-color);
+    border-radius: 50%;
+}
+
+.is-hidden {
+    display: none;
+}
+
+.carousel-button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: var(--primary-color);
+    border: none;
+    color: rgb(0, 0, 0);
+    width: 40px;
+    height: 40px;
+    font-size: 18px;
+    cursor: pointer;
+    z-index: 2;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.carousel-button.left {
+    left: -20px;
+}
+
+.carousel-button.right {
+    right: -20px;
+}
+
+.carousel-button:hover {
+    background: var(--secondary-color);
+}
+
 
 @media (max-width: 768px) {
     .content-section {

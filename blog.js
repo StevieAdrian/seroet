@@ -115,4 +115,19 @@ document.addEventListener('DOMContentLoaded', function() {
         moveToSlide(track, currentSlide, targetSlide);
         updateDots(currentDot, targetDot);
     });
+
+    let autoSlideInterval = setInterval(() => {
+        const currentSlide = track.querySelector('.current-slide');
+        let nextSlide = currentSlide.nextElementSibling;
+        const currentDot = dotsNav.querySelector('.current-slide');
+        let nextDot = currentDot.nextElementSibling;
+    
+        if (!nextSlide) {
+            nextSlide = slides[0];
+            nextDot = dots[0];
+        }
+    
+        moveToSlide(track, currentSlide, nextSlide);
+        updateDots(currentDot, nextDot);
+    }, 5000);
 });

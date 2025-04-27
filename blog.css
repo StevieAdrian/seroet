@@ -234,7 +234,7 @@
     position: relative;
     overflow: visible; 
     width: 100%;
-    max-width: 700px;
+    max-width: 1000px;
     margin: 0 auto;
 }
 
@@ -263,6 +263,7 @@
 
 .carousel-nav {
     display: flex;
+    margin-top: 1rem;
     gap: 20px;
     justify-content: center;
     align-items: center;
@@ -284,11 +285,13 @@
 
 .testimoni-item {
     background: white;
-    padding: 30px;
-    border-radius: 15px;
+    padding: 50px;
+    border-radius: 20px;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
     text-align: center;
-    height: 100%;
+    height: auto;
+    min-height: 200px;
+    width: 100%;
     box-sizing: border-box;
     display: flex;
     flex-direction: column;
@@ -297,8 +300,8 @@
 }
 
 .testimoni-foto {
-    width: 80px;
-    height: 80px;
+    width: 145px;
+    height: 145px;
     border-radius: 50%;
     object-fit: cover;
     margin-bottom: 20px;
@@ -306,7 +309,8 @@
 }
 
 .testimoni-video {
-    width: 100%;
+    width: 900%;
+    height: 100%;
     max-width: 400px;
     height: auto; 
     max-height: 225px; 
@@ -320,6 +324,7 @@
     font-style: italic;
     margin-bottom: 15px;
     line-height: 1.6;
+    font-size: 1.3rem;
 }
 
 .testimoni-item h4 {
@@ -397,5 +402,63 @@
     
     .modal-title {
         font-size: 1.6rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .carousel {
+        max-width: 95%;
+        overflow: visible;
+    }
+
+    .carousel-track-container {
+        min-height: 400px; /* kurangin dari desktop */
+        padding: 20px 0;
+    }
+
+    .testimoni-item {
+        padding: 30px;
+        min-height: auto; /* hapus min-height fix di HP */
+    }
+
+    .testimoni-foto {
+        width: 80px; /* kecilin foto */
+        height: 80px;
+        margin-bottom: 15px;
+    }
+
+    .testimoni-item p {
+        font-size: 1rem; /* kecilin tulisan */
+        line-height: 1.5;
+    }
+
+    .testimoni-item h4 {
+        font-size: 1rem; /* kecilin nama */
+    }
+
+    .carousel-button {
+        width: 35px; /* kecilin tombol panah */
+        height: 35px;
+        font-size: 16px;
+    }
+
+    .carousel-button.left {
+        left: -15px; /* rapetin tombol kiri */
+    }
+
+    .carousel-button.right {
+        right: -15px; /* rapetin tombol kanan */
+    }
+}
+
+@media (max-width: 768px) {
+    .testimoni-video {
+        width: 100%;
+        max-width: 250px; /* atau 300px kalau mau lebih besar */
+        height: auto;
+        max-height: 200px; /* supaya videonya gak terlalu tinggi */
+        border-radius: 10px;
+        margin-bottom: 15px;
+        object-fit: cover;
     }
 }

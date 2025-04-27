@@ -139,6 +139,10 @@
     justify-content: space-between;
 }
 
+.order-form textarea {
+    resize: none;
+}
+
 .form-group label {
     margin-top: 10px;
 }

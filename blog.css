@@ -442,6 +442,10 @@
         font-size: 16px;
     }
 
+    .carousel-slide {
+        height: 100%;
+    }
+
     .carousel-button.left {
         left: -15px; /* rapetin tombol kiri */
     }
